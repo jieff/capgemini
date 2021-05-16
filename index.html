@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pagina Inicial</title>
+    <meta charset="utf8">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="./frontend/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./frontend/bootstrap/css/stylo.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        #toggle {
+            width: 500px;
+            height: 40px;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        
+        $(function () {
+            
+            $("#toggle").hide();
+
+            $("#btnTeste").click(function () {
+                $(document).click(function () {
+                    $("#toggle").show();
+                    
+                });
+                });
+            });
+    </script>
+
+</head>
+
+<body>
+
+    <!--nav-->
+    <nav class="navbar fixed-top navbar-dark bg-light">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home &nbsp;&nbsp;&nbsp;&nbsp; | </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./view/cadastrar.php">Cadastrar Anúncios &nbsp;&nbsp;&nbsp;&nbsp; | </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./view/listar.php">Lista de Anúncios &nbsp;&nbsp;&nbsp;&nbsp; |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./view/relatorio.php">Relatórios &nbsp;&nbsp;&nbsp;&nbsp; |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> &nbsp;&nbsp;&nbsp;&nbsp </a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary btn-sm" id="btnTeste">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+            </li>
+            <li class="nav-item">
+                <div id="toggle">
+                    <!--form consulta nome-->
+                    <div class="mb3">
+                    <form class="form-control" action="./view/consultarNome.php" method="POST">
+                        <input class="form-control" type="text" name="nome" placeholder="PESQUISA POR CLIENTE EX.: HAVAN, CAPGEMINI, AMBEV">
+                        <div class="d-grid gap-2">
+                            <input class="btn btn-primary btn-sm" type="submit" value="Pesquisar">
+                        </div>
+                    </form>
+                    <hr>
+                    <form class="form-control" action="./view/consultarData.php" method="POST">
+                        <input class="form-control" type="date" name="data1">
+                        <input class="form-control" type="date" name="data2">
+                        <div class="d-grid gap-2">
+                            <input class="btn btn-primary btn-sm" type="submit" value="Pesquisar">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+    <br>
+    <br><br>
+
+    <!--IMG CAPGEMINI-->
+
+    <img src="./frontend/capgemini.png" alt="some text">
+
+    <!--footer-->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">2021 | <a href="https://github.com/jieff">GitHub</a> </span>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./frontend/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!--form cadastrar-->
+
+<form action="../backend/model/cadastrarModel.php" method="POST" name="Cadastrar">
+    <legend>Cadastro Anúncios</legend>
+    <div class="mb3">
+        <div class="col-sm-6">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Anúncio</label>
+            <input type="text" class="form-control" name="nomeAnuncio" placeholder="Nome do anúncio">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Cliente</label>
+            <input type="text" class="form-control" name="cliente" placeholder="Nome do cliente">
+            <div class="col-sm-5">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">
+                    DataInicial</label>
+                <input type="date" class="form-control" name="dataInicio">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">
+                    DataEncerramento</label>
+                <input type="date" class="form-control" name="dataTermino">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Investimento</label>
+                <input type="number" class="form-control" name="investimento" placeholder="Invetimento/Dia"><br>
+            </div>
+            <div class="d-grid gap-2">
+                <input type="submit" class="btn btn-success btn-sm" value="Enviar">
+            </div>
+        </div>
+    </div>
+</form>

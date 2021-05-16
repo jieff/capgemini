@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>drop demo</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        #toggle {
+            width: 100px;
+            height: 100px;
+            background: #white;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        
+        $(function () {
+            
+            $("#toggle").hide();
+            $("#btnTeste").click(function () {
+                $(document).click(function () {
+                    $("#toggle").show("blind");
+                    $("#btnTeste").hide();
+                });
+            });
+
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <div id="toggle">
+        <!--form consulta nome-->
+        <form action="../backend/model/consultarModel.php" method="POST">
+            <input type="text" name="nome">
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+
+    <button id="btnTeste">.</button>
+    
+
+</body>
+
+</html>
